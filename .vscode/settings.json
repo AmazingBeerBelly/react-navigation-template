@@ -1,0 +1,5 @@
+{
+  "eslint.autoFixOnSave": true,
+  "eslint.nodePath": "/usr/local/bin/node",
+  "eslint.workingDirectories": ["/app/project/rn/react_navigation_template"]
+}

@@ -1,0 +1,1 @@
+export const UPDATE_VERSION = 'MY/UPDATE_VERSION'
