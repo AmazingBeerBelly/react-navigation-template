@@ -1,4 +1,4 @@
-# react-navigation-template -- using react-navigation, redux, redux-persist, redex-thunk
+# react-navigation-template -- using react-navigation, redux, redux-persist, redux-thunk
 
 ### init steps:
 1. npm install
