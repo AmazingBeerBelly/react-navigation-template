@@ -1,9 +1,11 @@
-import { UPDATE_VERSION } from './actionTypes'
+import { put } from 'redux-saga/effects'
 
-export function updateVersion() {
-  return (dispatch) => {
-    dispatch({
-      type: UPDATE_VERSION,
-    })
+import { UPDATE_VERSION_SUCCESS, UPDATE_VERSION_FAILED } from './actionTypes'
+
+export function* updateRequest() {
+  try {
+    yield put({ type: UPDATE_VERSION_SUCCESS })
+  } catch (error) {
+    yield put({ type: UPDATE_VERSION_FAILED })
   }
 }

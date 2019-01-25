@@ -6,7 +6,7 @@ import {
 } from 'react-native'
 import { connect } from 'react-redux'
 
-import { updateVersion } from '../actions'
+import { UPDATE_REQUEST } from '../actionTypes'
 
 class MyScreen extends Component {
   static navigationOptions = {
@@ -25,7 +25,7 @@ class MyScreen extends Component {
       <ScrollView>
         <Text>{this.props.my.version}</Text>
         <Button
-          onPress={() => this.props.dispatchUpdateVersion()}
+          onPress={() => this.props.dispatch({ type: UPDATE_REQUEST })}
           title="update"
           color="#aaa"
         />
@@ -39,8 +39,4 @@ const mapStateToProps = state => ({
   my: state.my,
 })
 
-const mapDispatchToProps = dispatch => ({
-  dispatchUpdateVersion: () => dispatch(updateVersion()),
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(MyScreen)
+export default connect(mapStateToProps)(MyScreen)
